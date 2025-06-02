@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: 
+        url('https://www.transparenttextures.com/patterns/cubes.png'),
+        url('https://media.istockphoto.com/id/1180721795/photo/human-head-made-up-of-technological-lines-with-the-concept-of-artificial-intelligence-3d.jpg?s=612x612&w=0&k=20&c=CYTpddqWVqz1YK8E5P1shuF2ywrOrV8JnoPRL_gISyY=');
+    background-size: cover;
+    padding: 50px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #1e88e5;
+    font-size: 2.5em;
+}
+
+.legend-box {
+    background-color: #ffffffcc;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: #444;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.legend-box p {
+    margin: 6px 0;
+    font-weight: bold;
+}
+
+form {
+    background-color: #1b1717;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0878bd;
+}
+
+input[type="file"],
+textarea,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #1883ae;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #43a047;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #0fc396;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    color: #f72585;
+    font-size: large;
+}
+
+img, audio {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.conditions-list {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.conditions-list li {
+    font-size: 1.1em;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.likely-present {
+    background-color: #d0f0c0;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+.likely-absent {
+    background-color: #ffe6e6;
+    color: #c62828;
+    border: 2px solid #c62828;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MedVision - AI Medical Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>MedVision - AI Medical Assistant</h1>
+
+  <!-- Legend always visible -->
+  <div class="legend-box">
+    <p>🔵 Probability > 0.5: <strong>Likely Present</strong></p>
+    <p>🔴 Probability ≤ 0.5: <strong>Likely Absent</strong></p>
+  </div>
+  
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <label>Upload Medical Image (X-ray):</label><br />
+    <input type="file" name="image" accept="image/*" required /><br /><br />
+    
+    <label>Upload Symptom Audio (Optional):</label><br />
+    <input type="file" name="audio" accept="audio/*" /><br /><br />
+    
+    <label>Or Enter Symptoms as Text:</label><br />
+    <textarea name="symptom_text" rows="4" cols="50" placeholder="E.g., fever, cough, chest pain"></textarea><br /><br />
+    
+    <button type="submit">Diagnose</button>
+  </form>
+  
+  {% if result %}
+    <h2>Diagnosis & Medical Suggestions:</h2>
+    <p>{{ result }}</p>
+
+    {% if predictions %}
+      <h3>Detected Conditions:</h3>
+      <ul class="conditions-list">
+        {% for label, prob in predictions.items() %}
+          <li class="{% if prob > 0.5 %}likely-present{% else %}likely-absent{% endif %}">
+            {{ label }} – {% if prob > 0.5 %}Likely Present{% else %}Likely Absent{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if image %}
+      <h3>Uploaded X-ray Image:</h3>
+      <img src="{{ url_for('static', filename=image) }}" width="250" alt="Uploaded X-ray Image" />
+    {% endif %}
+  {% endif %}
+</body>
+</html>

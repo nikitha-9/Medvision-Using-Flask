@@ -1,0 +1,10 @@
+flask
+tensorflow
+torch
+torchvision
+torchxrayvision
+transformers
+Pillow
+soundfile
+SpeechRecognition
+gtts
